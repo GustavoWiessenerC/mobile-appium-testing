@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.9.12 on win32)" generated="2024-10-25T11:51:25.519680" rpa="false" schemaversion="5">
+<suite id="s1" name="Cadastro-Gestao" source="C:\Users\gcastilho\Desktop\projetos\appium-robot\tests\cadastro-gestao.robot">
+<test id="s1-t1" name="Cadastrar pessoa válida" line="12">
+<kw name="Open Session" owner="cadastro-resources" type="SETUP">
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2024-10-25T11:51:25.843749" elapsed="0.001032"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>${APP_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP_PATH}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-10-25T11:51:25.844781" elapsed="11.416840"/>
+</kw>
+<doc>Abre a sessão do Appium configurada com os parâmetros especificados.</doc>
+<status status="PASS" start="2024-10-25T11:51:25.842221" elapsed="11.419400"/>
+</kw>
+<kw name="Generate Random String" owner="String">
+<msg time="2024-10-25T11:51:37.263620" level="INFO">${Name} = ko7dgG</msg>
+<var>${Name}</var>
+<arg>6</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2024-10-25T11:51:37.262621" elapsed="0.000999"/>
+</kw>
+<kw name="Catenate" owner="BuiltIn">
+<msg time="2024-10-25T11:51:37.266142" level="INFO">${Email} = ko7dgG @test.com</msg>
+<var>${Email}</var>
+<arg>${Name}</arg>
+<arg>@test.com</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<status status="PASS" start="2024-10-25T11:51:37.264623" elapsed="0.001519"/>
+</kw>
+<kw name="Click CadastrarUsuário" owner="cadastro-resources">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:42.392688" level="INFO">criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar
+criteria is button_cadastrar</msg>
+<arg>${BUTTON_CADASTRAR}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-25T11:51:37.267155" elapsed="5.125533"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:42.396224" level="INFO">Clicking element 'button_cadastrar'.</msg>
+<msg time="2024-10-25T11:51:42.640939" level="INFO">criteria is button_cadastrar</msg>
+<arg>${BUTTON_CADASTRAR}</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-25T11:51:42.393687" elapsed="0.247252"/>
+</kw>
+<doc>Clica no botão de cadastro de usuário.</doc>
+<status status="PASS" start="2024-10-25T11:51:37.267155" elapsed="5.373784"/>
+</kw>
+<kw name="Input Name Query" owner="cadastro-resources">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:43.933510" level="INFO">criteria is TextInputNome
+criteria is TextInputNome</msg>
+<arg>${TEXT_INPUT_NAME}</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2024-10-25T11:51:42.643945" elapsed="1.289565"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:43.935508" level="INFO">Typing text 'ko7dgG' into text field 'TextInputNome'</msg>
+<msg time="2024-10-25T11:51:45.096792" level="INFO">criteria is TextInputNome</msg>
+<arg>${TEXT_INPUT_NAME}</arg>
+<arg>${query}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-25T11:51:43.933510" elapsed="1.163282"/>
+</kw>
+<arg>${Name}</arg>
+<doc>Insere o nome fornecido no campo de nome.</doc>
+<status status="PASS" start="2024-10-25T11:51:42.642941" elapsed="2.453851"/>
+</kw>
+<kw name="Input Email Query" owner="cadastro-resources">
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:45.102792" level="INFO">Typing text 'ko7dgG @test.com' into text field 'TextInputEmail'</msg>
+<msg time="2024-10-25T11:51:46.167786" level="INFO">criteria is TextInputEmail</msg>
+<arg>${TEXT_INPUT_EMAIL}</arg>
+<arg>${query}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2024-10-25T11:51:45.101792" elapsed="1.065994"/>
+</kw>
+<arg>${Email}</arg>
+<doc>Insere o e-mail fornecido no campo de e-mail.</doc>
+<status status="PASS" start="2024-10-25T11:51:45.099794" elapsed="1.067992"/>
+</kw>
+<kw name="Click Identificação Query" owner="cadastro-resources">
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:46.888430" level="INFO">xpath criteria: //*[contains(@text,"Mulher")]</msg>
+<arg>${query}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-10-25T11:51:46.169780" elapsed="0.718650"/>
+</kw>
+<arg>${tipo_identificacao}</arg>
+<doc>Clica no texto de identificação especificado.</doc>
+<status status="PASS" start="2024-10-25T11:51:46.168781" elapsed="0.719649"/>
+</kw>
+<kw name="Click Estado Query" owner="cadastro-resources">
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Acre</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-10-25T11:51:46.890993" elapsed="0.341143"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:47.530780" level="INFO">xpath criteria: //*[contains(@text,"Acre")]</msg>
+<arg>Acre</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-10-25T11:51:47.233139" elapsed="0.298647"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Alagoas</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-10-25T11:51:47.531786" elapsed="1.188307"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:49.505927" level="INFO">xpath criteria: //*[contains(@text,"Alagoas")]</msg>
+<arg>${query}</arg>
+<doc>Click text identified by ``text``.</doc>
+<status status="PASS" start="2024-10-25T11:51:48.720093" elapsed="0.786854"/>
+</kw>
+<arg>${estado}</arg>
+<doc>Seleciona o estado especificado da lista.</doc>
+<status status="PASS" start="2024-10-25T11:51:46.889981" elapsed="2.616966"/>
+</kw>
+<kw name="Click BotaoCadastrar" owner="cadastro-resources">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-10-25T11:51:49.510974" level="INFO">Clicking element 'BotaoCadastrar'.</msg>
+<msg time="2024-10-25T11:51:49.612896" level="INFO">criteria is BotaoCadastrar</msg>
+<arg>BotaoCadastrar</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-10-25T11:51:49.508979" elapsed="0.103917"/>
+</kw>
+<doc>Clica no botão para finalizar o cadastro.</doc>
+<status status="PASS" start="2024-10-25T11:51:49.507955" elapsed="0.104941"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Cadastro realizado com sucesso</arg>
+<doc>Waits until `text` appears on current page.</doc>
+<status status="PASS" start="2024-10-25T11:51:49.613895" elapsed="0.994920"/>
+</kw>
+<kw name="Close Session" owner="cadastro-resources" type="TEARDOWN">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-10-25T11:51:50.609816" elapsed="0.589857"/>
+</kw>
+<doc>Fecha a sessão atual do Appium.</doc>
+<status status="PASS" start="2024-10-25T11:51:50.608815" elapsed="0.591859"/>
+</kw>
+<doc>Realiza o cadastro de uma nova pessoa para a Gestão de Cadastros.
+1. Gera um nome aleatório e e-mail baseado no nome.
+2. Preenche os dados de identificação e estado.
+3. Finaliza o cadastro e verifica se o sucesso foi exibido.</doc>
+<status status="PASS" start="2024-10-25T11:51:25.841220" elapsed="25.359454"/>
+</test>
+<status status="PASS" start="2024-10-25T11:51:25.520680" elapsed="25.680993"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Cadastro-Gestao">Cadastro-Gestao</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
