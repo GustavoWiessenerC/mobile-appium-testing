@@ -1,7 +1,7 @@
 
 # Automação de Testes para Android com Robot Framework e Appium
 
-Este projeto executa a automação do aplicativo Android [Appium](https://github.com/clarabez/appium-android-app) 
+Este projeto executa a automação do aplicativo Android [Appium](https://github.com/clarabez/appium-curso-apk) 
 usando o [Robot Framework](https://robotframework.org/robotframework/) e a biblioteca 
 [AppiumLibrary](https://github.com/serhatbolsu/robotframework-appiumlibrary). 
 O objetivo é criar fluxos de teste de ponta a ponta para ações comuns de automação em aplicativos Android.
@@ -13,7 +13,7 @@ O objetivo é criar fluxos de teste de ponta a ponta para ações comuns de auto
 
 ## Sobre o Aplicativo em Teste
 
-O aplicativo [Appium](https://github.com/clarabez/appium-android-app) é desenvolvido para automação mobile, 
+O aplicativo [Appium](https://github.com/clarabez/appium-curso-apk) é desenvolvido para automação mobile, 
 focado no Appium. Ele é simples, projetado para simular fluxos de cadastro, e inclui elementos comuns em automação mobile, 
 como campos de texto (EditText), menus de rolagem (spinner) e mensagens de notificação (toast messages).
 
@@ -41,7 +41,7 @@ Recomendamos o uso de um ambiente virtual (`virtualenv`) para isolar as dependê
 Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/appium-robot.git
+git clone https://github.com/{USER}/mobile-appium-testing
 cd appium-robot
 ```
 
