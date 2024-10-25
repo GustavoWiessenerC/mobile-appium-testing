@@ -1,13 +1,9 @@
 
 *** Settings ***
-Library    AppiumLibrary
+Resource    ./credentials/credentials.robot
+Library     AppiumLibrary
 
 *** Variables ***
-${APP_URL}           http://localhost:4723/wd/hub
-${DEVICE_NAME}       Pixel4T
-${PLATFORM_NAME}     Android
-${APP_PATH}          ${EXECDIR}/apks/app-curso.apk
-${APP_PACKAGE}       com.example.cursoappium
 ${BUTTON_CADASTRAR}  button_cadastrar
 ${TEXT_INPUT_NAME}   TextInputNome
 ${TEXT_INPUT_EMAIL}  TextInputEmail
@@ -35,7 +31,7 @@ Click CadastrarUsuário
 Input Name Query
     [Arguments]         ${query}
     [Documentation]     Insere o nome fornecido no campo de nome.
-    Wait Until Page Contains Element    ${TEXT_INPUT_NAME}
+    Wait Until Page Contains Element     ${TEXT_INPUT_NAME}
     Input Text                           ${TEXT_INPUT_NAME}  ${query}
 
 Input Email Query
